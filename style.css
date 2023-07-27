@@ -342,13 +342,17 @@ header .logo img {
 }
 
 .footer-container {
+  padding-top: 30px;
+  padding-bottom: 30px;
   width: 100%;
   background-color: #000;
   color: white;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+  align-items: stretch;
   font-size: 2em;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 .footer-container p {
   width: 80%;
@@ -360,7 +364,21 @@ header .logo img {
   transform: translateX(-100px);
   transition: all 1s;
 }
-
+.logo-footer {
+  width: 35%;
+}
+.logo-footer img {
+  width: 20%;
+}
+.logo-footer p {
+  font-size: 1em;
+}
+.plateforme,
+.client {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
 .hidden-right {
   opacity: 0;
   filter: blur(5px);
@@ -384,6 +402,27 @@ header .logo img {
   filter: blur(0);
   transform: translateX(0);
 }
+.copyright {
+  background-color: #f2a62d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  color: #000;
+}
+.copy-link {
+  display: flex;
+  gap: 30px;
+}
+.copy-link li {
+  list-style: none;
+}
+.copy-link li a {
+  text-decoration: none;
+}
 
 @media (max-width: 1565px) {
   .hero-container {
@@ -392,10 +431,26 @@ header .logo img {
 }
 @media (max-width: 950px) {
   .promotions,
-  .fontionaliter {
+  .fontionaliter,
+  .footer-container,
+  .copyright,
+  .copy-link {
     flex-direction: column;
   }
-
+  .copy-link {
+    align-items: start;
+    justify-content: left;
+  }
+  .copyright {
+    justify-content: left;
+    align-items: start;
+  }
+  .footer-container {
+    padding-left: 20px;
+    padding-right: 10px;
+    align-items: center;
+    justify-content: center;
+  }
   .hero-container {
     margin-top: -200px;
     padding-top: 300px;
@@ -422,6 +477,12 @@ header .logo img {
   }
   .recette {
     width: 93%;
+  }
+  .logo-footer,
+  .plateforme,
+  .client {
+    font-size: 0.8em;
+    width: 95%;
   }
   .promotions-fontionaliter,
   .description-fontionaliter,
